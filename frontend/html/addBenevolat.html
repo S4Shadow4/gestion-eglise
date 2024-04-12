@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add Benevolat</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <header>
+        <section>
+            <div class="logo">
+                <img src="../images/croix2-1.jpg" alt="">
+                <h3>EGLISE <span id="nuit_color">MAWU </span> LAWOE</h3>
+            </div>
+            
+        </section>
+
+        <menu>
+            <nav>
+                <ul>
+                    <li><a href="./admin.html">ACCUEIL</a></li>
+                    <li><a href="./messagerie.html">MESSAGERIE</a></li>
+                    <li><a href="./addEvenement.html">EVENEMENT</a></li>
+                </ul>
+            </nav>
+        </menu>
+
+        <section class="auth">
+            <button class="signup"><a href="./admin-auth.html">Inscription</a></button>
+            <button class="login"><a href="./admin-auth.html">Connexion</a></button>
+        </section>
+        
+    </header>
+
+    <div class="container">
+        <div class="content-container">
+            <h2>Ajoutez un benevolat</h2>
+
+            <form action="http://localhost:5000/addBenevolat/submit" method="post">
+                <label for="nom">Nom benevolat :</label>
+                <input type="text" id="nom" name="nom" required>                
+            
+                
+                <label for="description">Description benevolat :</label>
+                <input type="text" id="description" name="description" required>
+                
+                <label for="date">Date benevolat</label>
+                <input type="datetime-local" id="date" name="date" required>
+                
+                <button type="submit">Enregistrer le benevolat</button>
+            </form>
+        </div>
+        <div id="notification" class="notification"></div>
+    </div>
+    <script src="../javascript/addBenevolat.js"></script>
+</body>
+</html>

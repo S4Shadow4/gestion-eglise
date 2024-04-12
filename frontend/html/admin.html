@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <title>Dashboard</title>
+</head>
+<body>
+    <div class="container">
+
+        <aside>
+            <div class="toggle">
+                <div class="logo">
+                    <h2>EGLISE <br><span class="danger">MAWULAWOE</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">
+                        close
+                    </span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+               <a href="../html/addFidele.html" id="Commandes"><i class="fas fa-chart-bar">Add Fidele</i></a>
+               <a href="../html/addEvenement.html" id="Commandes"><i class="fas fa-chart-bar">Add Evenements</i></a>
+               <a href="../html/addBenevolat.html"><i class="fas fa-chart-bar">AddBenevolat</i></a>
+               <a href="#"><i class="fas fa-chart-bar">IDENTIFIANTS FIDELES</i></a>
+               <a href="#"><i class="fas fa-chart-bar">Fidele</i></a>
+               <a href="#"><i class="fas fa-chart-bar">BENEVOLES</i></a>
+               <a href="#"><i class="fas fa-chart-bar">Benevolat</i></a>
+               <a href="#" id="Commandes"><i class="fas fa-chart-bar">Evenements</i></a>
+               <a href="#"><i class="fas fa-chart-bar">Benevolat (BENEVOLES)</i></a>
+               <a href="#"><i class="fas fa-chart-bar">Benevolat (FIDELES)</i></a>
+               <a href="../html/messagerie.html"><i class="fas fa-chart-bar"></i>MESSAGERIE</a>
+               <a href="../html/admin-auth.html"><i class="fas fa-chart-bar">Se deconnecter</i></a>
+            </div>
+        </aside>
+
+
+
+        <main>
+            <h1>Analyse</h1>
+
+            <div class="analyse">
+                <div class="sales">
+                    <div class="status">
+                        <div class="info">
+                            <h3>Contributions Totales</h3>
+                            <h1>fcfa 1.500.000</h1>
+                        </div>
+                        <div class="progresss">
+                            <svg>
+                                <circle cx="38" cy="38" r="36"></circle>
+                            </svg>
+                            <div class="percentage">
+                                <p>+70%</p>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+                <div class="visits">
+                    <div class="status">
+                        <div class="info">
+                            <h3>Nombres estimé participants</h3>
+                            <h1>24,981</h1>
+                        </div>
+                        <div class="progresss">
+                            <svg>
+                                <circle cx="38" cy="38" r="36"></circle>
+                            </svg>
+                            <div class="percentage">
+                                <p>48%</p>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+                <div class="searches">
+                    <div class="status">
+                        <div class="info">
+                            <h3>Membres du Comité </h3>
+                            <h1>14,147</h1>
+                        </div>
+                        <div class="progresss">
+                            <svg>
+                                <circle cx="38" cy="38" r="36"></circle>
+                            </svg>
+                            <div class="percentage">
+                                <p>+21%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="recent-orders">
+
+                <h2>Identifiants Fideles</h2>
+                <table id="Identifiants-fideles">
+                    <thead>
+                        <tr>
+                            <th>identifiant</th>
+                            <th>nom_fidele</th>
+                            <th>utilise</th>
+                            <th>date_ajout</th>
+                        </tr>
+                    </thead>
+                    <tbody id="Identifiants-fidelesTableBody"></tbody>
+                </table> 
+
+                <h2>Fideles</h2>
+                <table id="Fidele">
+                    <thead>
+                        <tr>
+                            <th>id_fidele</th>
+                            <th>username_fidele</th>
+                            <th>nom_fidele</th>
+                            <th>age_fidele</th>
+                            <th>sexe_fidele</th>
+                        </tr>
+                    </thead>
+                    <tbody id="FideleTableBody"></tbody>
+                </table> 
+
+
+                <h2>Benevoles</h2>
+                <table id="Benevole">
+                    <thead>
+                        <tr>
+                            <th>id_benevole</th>
+                            <th>username_benevole</th>
+                            <th>nom_benevole</th>
+                            <th>age_benevole</th>
+                            <th>sexe_benevole</th>
+                        </tr>
+                    </thead>
+                    <tbody id="BenevoleTableBody"></tbody>
+                </table> 
+
+                <h2>Benevolat</h2>
+                <table id="Benevolat">
+                    <thead>
+                        <tr>
+                            <th>id_benevolat</th>
+                            <th>nom_benevolat</th>
+                            <th>date_benevolat</th>
+                            <th>description_benevolat</th>
+                        </tr>
+                        
+                    </thead>
+                    <tbody id="BenevolatTableBody"></tbody>
+                </table>
+
+                <h2>Evenements</h2>
+                <table id="Evenements">
+                    <thead>
+                        <tr>
+                            <th>id_evenement</th>
+                            <th>nom_evenement</th>
+                            <th>date_evenement</th>
+                            <th>description_evenement</th>
+                        </tr>
+                    </thead>
+                    <tbody id="EvenementsTableBody"></tbody>
+                </table> 
+
+
+                <h2>Benevolat (Benevoles)</h2>
+                <table id="Benevolat-benevoles">
+                    <thead>
+                        <tr>
+                            <th>id_benevole</th>
+                            <th>id_benevolat</th>
+                            <th>date_reservation</th>
+                        </tr>
+                    </thead>
+                    <tbody id="Benevolat-benevolesTableBody"></tbody>
+                </table> 
+
+                <h2>Benevolat (Fideles)</h2>
+                <table id="Benevolat-fideles">
+                    <thead>
+                        <tr>
+                            <th>id_fidele</th>
+                            <th>id_benevolat</th>
+                            <th>date_reservation</th>
+                        </tr>
+                    </thead>
+                    <tbody id="Benevolat-fidelesTableBody"></tbody>
+                </table> 
+
+
+                
+
+                <a href="#">Show All</a>
+            </div>
+
+        </main>
+
+        <div class="right-section">
+            <div class="nav">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">
+                        menu
+                    </span>
+                </button>
+               <!--  <div class="dark-mode">
+                    <span class="material-icons-sharp active">
+                        L_mode
+                    </span>
+                    <span class="material-icons-sharp">
+                        D_mode
+                    </span>
+                </div> -->
+
+
+            </div>
+
+            <div class="user-profile">
+                <div class="logo">
+                    <img src="../images/croix2.jpg">
+                    <h2>EGLISE <br> MAWULAWOE</h2>
+                </div>
+            </div>
+
+            <div class="reminders">
+                <div class="header">
+                    <h2>Rappels</h2>
+                    <span class="material-icons-sharp">
+                        notifications_aucune
+                    </span>
+                </div>
+
+                <div class="notification">
+                    <div class="icon">
+                        <span class="material-icons-sharp">
+                            volume_up
+                        </span>
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>Workshop</h3>
+                            <small class="text_muted">
+                                08:00 AM - 12:00 PM
+                            </small>
+                        </div>
+                        <span class="material-icons-sharp">
+                            more_vert
+                        </span>
+                    </div> 
+                </div>
+
+                <div class="notification deactive">
+                    <div class="icon">
+                        <span class="material-icons-sharp">
+                            edit
+                        </span>
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>Workshop</h3>
+                            <small class="text_muted">
+                                08:00 AM - 12:00 PM
+                            </small>
+                        </div>
+                        <span class="material-icons-sharp">
+                            more_vert
+                        </span>
+                    </div> 
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <script src="../javascript/admin.js"></script>
+</body>
+</html>

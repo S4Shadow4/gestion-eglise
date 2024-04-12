@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evenements</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <header>
+        <section>
+            <div class="logo">
+                <img src="../images/croix2-1.jpg" alt="">
+                <h3>EGLISE <span id="nuit_color">MAWU </span> LAWOE</h3>
+            </div>
+            
+        </section>
+
+        <menu>
+            <nav>
+                <ul>
+                    <li><a href="./user.html" id="evenementsLink">ACCUEIL</a></li>
+                    <li><a href="./messagerie.html" id="messagerieLink">MESSAGERIE</a></li>
+                    <li><a href="./contributions.html" id="contributionsLink">CONTRIBUTIONS</a></li>
+                </ul>
+            </nav>
+        </menu>
+
+        <section class="auth">
+            <button class="signup"><a href="./inscription-fidele.html">Inscription</a></button>
+            <button class="login"><a href="./connexion-fidele.html">Connexion</a></button>
+        </section>
+        
+    </header>
+
+    <div class="container">
+        <div class="content-container">
+            <h2>Reserver pour un evenement <br>
+                (fidele)
+            </h2>
+
+            <form id="evenementForm" action="http://localhost:5000/reservation/submit" method="POST">
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" required> 
+                
+                <label for="evenement">Choisissez un événement :</label>
+                <select id="evenement" name="evenement" required>
+                    <!-- Options d'événement seront ajoutées dynamiquement par JavaScript -->
+                </select>
+            
+                <button type="submit">Envoyer la réservation</button>
+            </form>
+            
+            
+        </div>
+    </div>
+    <script src="../javascript/evenements.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+    <!DOCTYPE html>
+    <html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Benevolat</title>
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+    <body>
+
+        <header>
+            <section>
+                <div class="logo">
+                    <img src="../images/croix2-1.jpg" alt="">
+                    <h3>EGLISE <span id="nuit_color">MAWU </span> LAWOE</h3>
+                </div>
+                
+            </section>
+
+            <menu>
+                <nav>
+                    <ul>
+                        <li><a href="./user.html" id="evenementsLink">ACCUEIL</a></li>
+                        <li><a href="./messagerie.html" id="messagerieLink">MESSAGERIE</a></li>
+                        <li><a href="./contributions.html" id="contributionsLink">CONTRIBUTIONS</a></li>
+                    </ul>
+                </nav>
+            </menu>
+
+            <section class="auth">
+                <button class="signup"><a href="./inscription-benevole.html">Inscription</a></button>
+                <button class="login"><a href="./connexion-benevole.html">Connexion</a></button>
+            </section>
+            
+        </header>
+
+        <div class="container">
+            <div class="content-container">
+                <h2>S'enregistrez pour un benevolat <br>
+                    (benevole)
+                </h2>
+
+                <form id="benevolatForm">
+                    <label for="nom">Nom :</label>
+                    <input type="text" id="nom" name="nom" required> 
+                    
+                    <label for="benevolat">Choisissez votre benevolat :</label>
+                    <select id="benevolat" name="benevolat" required>
+                        
+                    </select>
+
+                    <button type="submit">Envoyer la reservation</button>
+                </form>
+            </div>
+        </div>
+        <script src="../javascript/benevolat.js"></script>
+    </body>
+    </html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion-fidele</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <header>
+        <section>
+            <div class="logo">
+                <img src="../images/croix2-1.jpg" alt="">
+                <h3>EGLISE <span id="nuit_color">MAWU </span> LAWOE</h3>
+            </div>
+            
+        </section>
+
+
+        <section class="auth">
+            <button class="login"><a href="./user.html">Accueil</a></button>
+            <button class="signup"><a href="./inscription-benevole.html">Inscription</a></button>
+        </section>
+    </header>
+    <div class="container">
+        <div class="form-container">
+            <h2>Veuillez vous connectez (fideles)</h2>
+            <form action="http://localhost:5000/user/connexion" method="post">
+
+                <label for="userName">Nom utilisateur:</label>
+                <input type="text" id="userName" name="userName" required>
+            
+                <label for="loginPassword">Mot de passe:</label>
+                <input type="password" id="loginPassword" name="loginPassword" required>
+                <a href="./connexion-benevole.html" id="inscription-fidele"><p id="fidele-paragraphe">S'inscrire en tant que benevole?</p></a>
+            
+                <button type="submit">Se connecter</button>
+            </form>
+            <div id="notification" class="notification"></div>
+        </div>
+    </div>
+
+    <script src="../javascript/connexion-fidele.js"></script>
+</body>
+</html>
